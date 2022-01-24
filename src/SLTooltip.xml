@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="sl.sltooltip.SLTooltip" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>SL - Tooltip</name>
+    <description>Tooltip widget</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Tooltip">
+                <property key="triggerMode" type="enumeration" defaultValue="hover">
+                    <caption>Trigger mode</caption>
+                    <description>How to trigger the tooltip. For touch devices, the trigger is always touch.</description>
+                    <enumerationValues>
+                        <enumerationValue key="hover">Hover</enumerationValue>
+                        <enumerationValue key="leftClick">Left click</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="autoClose" type="boolean" defaultValue="true">
+                    <caption>Auto close</caption>
+                    <description>Auto close tooltip if user clicks outside the tooltip content and trigger</description>
+                </property>
+                <property key="showArrow" type="boolean" defaultValue="true">
+                    <caption>Show arrow</caption>
+                    <description>Show arrow to better indicate the tooltip trigger container</description>
+                </property>
+                <property key="placement" type="enumeration" defaultValue="bottom">
+                    <caption>Placement</caption>
+                    <description>How to place the tooltip relative to the tooltip trigger container</description>
+                    <enumerationValues>
+                        <enumerationValue key="top">Top</enumerationValue>
+                        <enumerationValue key="topStart">Top start</enumerationValue>
+                        <enumerationValue key="topEnd">Top end</enumerationValue>
+                        <enumerationValue key="bottom">Bottom</enumerationValue>
+                        <enumerationValue key="bottomStart">Bottom start</enumerationValue>
+                        <enumerationValue key="bottomEnd">Bottom end</enumerationValue>
+                        <enumerationValue key="right">Right</enumerationValue>
+                        <enumerationValue key="rightStart">Right start</enumerationValue>
+                        <enumerationValue key="rightEnd">Right end</enumerationValue>
+                        <enumerationValue key="left">Left</enumerationValue>
+                        <enumerationValue key="leftStart">Left start</enumerationValue>
+                        <enumerationValue key="leftEnd">Left end</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <property key="tooltipTriggerContent" type="widgets" required="true">
+                    <caption>Place tooltip trigger content here. This will trigger the tooltip visibility.</caption>
+                    <description />
+                </property>
+                <property key="tooltipContent" type="widgets" required="true">
+                    <caption>Place tooltip content here. This will be visible inside the tooltip.</caption>
+                    <description />
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>
