@@ -4,7 +4,7 @@ Tooltip widget to show a customizable tooltip on hover.
 
 ## 1\. Description
 
-You can use this widget to display a tooltip when hovering over an element. The tooltip is customizable.
+You can use this widget to display a tooltip when hovering over any element. Any element can be used as a trigger for the container. The content-container content is only loaded when hovering over the trigger. No need to create a class for every tooltip. The tooltip is customizable.
 
 ### 1.1 Browser example
 
