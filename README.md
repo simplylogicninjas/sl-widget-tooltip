@@ -1,24 +1,35 @@
-## SLTooltip
-[Tooltip widget]
+# SL Tooltip
 
-## Features
-[feature highlights]
+Tooltip widget to show a customizable tooltip on hover.
 
-## Usage
-[step by step instructions]
+## 1\. Description
 
-## Demo project
-[link to sandbox]
+You can use this widget to display a tooltip when hovering over an element. The tooltip is customizable.
 
-## Issues, suggestions and feature requests
-[link to GitHub issues]
+### 1.1 Browser example
 
-## Development and contribution
+<table><tbody><tr><td>Example 1</td><td>Example 2</td><td>Example 3</td></tr><tr><td><img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_browser_example.png" width="120"></td><td><img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_browser_example2.png" width="120"></td><td><img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_browser_example3.png" width="120"></td></tr></tbody></table>
 
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
+## 2\. Usage
 
-[specify contribution]
+* Place any content in the tooltip trigger container to trigger tooltip visibility.
+* Place any content in the content-container to display when hovering over the triggercontainer.
+
+### 2.1 Modeler example
+
+<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/modeler_example.png" width="600">
+
+### 2.2 Configuration example
+
+<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_general_tab.png" width="600">
+
+## 3\. Use Cases
+
+* This can be used to create a tooltip on any element.
+* This can be used with or without context.
+
+## 4\. Customization
+
+To customize the tooltip content you can edit the styling with css using the classname:
+
+* .sl-tooltip-content
