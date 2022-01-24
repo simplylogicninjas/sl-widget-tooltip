@@ -17,7 +17,7 @@ You can use this widget to display a tooltip when hovering over an element. The 
 
 ### 2.1 Modeler example
 
-<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/modeler_example.png" width="600">
+<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_modeler_example.png" width="600">
 
 ### 2.2 Configuration example
 
