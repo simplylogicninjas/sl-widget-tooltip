@@ -17,7 +17,8 @@ You can use this widget to display a tooltip when hovering over any element. Any
 
 ### 2.1 Modeler example
 
-<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_modeler_example.png" width="600">
+<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_modeler_example.png" width="300">
+<img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_modeler_example_filled.png" width="300">
 
 ### 2.2 Configuration example
 
@@ -30,6 +31,4 @@ You can use this widget to display a tooltip when hovering over any element. Any
 
 ## 4\. Customization
 
-To customize the tooltip content you can edit the styling with css using the classname:
-
-* .sl-tooltip-content
+You can stylize both trigger and content. If you want to style the content, the best way to do this is adding a container to the content pane and apply styling to the container.
