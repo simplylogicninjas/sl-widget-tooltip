@@ -1,13 +1,13 @@
 .sl-tooltip {
-    z-index: var(--z-index, 9999999); /** Needs a high z-index property to always show the menu */
+    z-index: var(--sl-tooltip-z-index, 9999999); /** Needs a high z-index property to always show the menu */
 }
 
 .sl-tooltip-content {
-    color: var(--color, #fff);
-    background: var(--bg, #000);
-    border-radius: 4px;
-    padding: 4px;
-    font-size: var(--font-size, 1.2rem);
+    color: var(--sl-tooltip-color, #fff);
+    background: var(--sl-tooltip-bg, #000);
+    border-radius: var(--sl-tooltip-border-radius, 4px);
+    padding: var(--sl-tooltip-padding, 4px);
+    font-size: var(--sl-tooltip-font-size, 1.2rem);
 }
 
 .sl-tooltip-trigger {
@@ -35,14 +35,14 @@
 
 .sl-tooltip-arrow {
     visibility: hidden;
+    z-index: -1;
 }
 
 .sl-tooltip-arrow::before {
     visibility: visible;
     content: '';
     transform: rotate(45deg);
-    background: var(--bg, #000);
-    z-index: -1;
+    background: var(--sl-tooltip-bg, #000);
 }
 
 .sl-tooltip[data-popper-placement^='top'] > .sl-tooltip-arrow {

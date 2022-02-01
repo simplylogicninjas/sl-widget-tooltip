@@ -13,6 +13,7 @@ interface Props {
     menuContent: ReactNode;
     placement: PlacementEnum;
     triggerMode: TriggerModeEnum;
+    offsetDistance: number;
 }
 
 export interface PopoverRef {
@@ -44,7 +45,8 @@ const useContextMenuPopper = (
         triggerElement: HTMLElement | null;
         arrowElement: HTMLElement | null;
     },
-    placement: PlacementEnum
+    placement: PlacementEnum,
+    offsetDistance: number
 ) => {
     return usePopper(elements.triggerElement, elements.menuElement, {
         placement: placementEnumMapping[placement],
@@ -57,9 +59,9 @@ const useContextMenuPopper = (
                 }
             },
             {
-                name: "computeStyles",
+                name: 'offset',
                 options: {
-                    gpuAcceleration: false // true by default
+                    offset: [0, offsetDistance]
                 }
             }
         ]
@@ -77,7 +79,8 @@ const Popper = React.forwardRef<PopoverRef | undefined, Props>((props: Props, re
             menuElement,
             arrowElement
         },
-        props.placement
+        props.placement,
+        props.offsetDistance
     );
 
     useImperativeHandle(ref, () => ({

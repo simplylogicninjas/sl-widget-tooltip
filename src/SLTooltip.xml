@@ -5,7 +5,6 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>SL - Tooltip</name>
     <description>Tooltip widget</description>
-    <icon/>
     <properties>
         <propertyGroup caption="General">
             <propertyGroup caption="Tooltip">
@@ -17,9 +16,13 @@
                         <enumerationValue key="leftClick">Left click</enumerationValue>
                     </enumerationValues>
                 </property>
+                <property key="offsetDistance" type="integer" defaultValue="0">
+                    <caption>Offset distance (pixels)</caption>
+                    <description>Place the popover content closer or farther away from the popover trigger</description>
+                </property>
                 <property key="autoClose" type="boolean" defaultValue="true">
                     <caption>Auto close</caption>
-                    <description>Auto close tooltip if user clicks outside the tooltip content and trigger</description>
+                    <description>Auto close tooltip if user clicks outside the tooltip content and trigger. This only works if "Trigger mode" is "Left click".</description>
                 </property>
                 <property key="showArrow" type="boolean" defaultValue="true">
                     <caption>Show arrow</caption>
