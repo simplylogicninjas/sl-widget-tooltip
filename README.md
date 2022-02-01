@@ -4,7 +4,7 @@ Tooltip widget to show a customizable tooltip on hover.
 
 ## 1\. Description
 
-You can use this widget to display a tooltip when hovering over any element. Any element can be used as a trigger for the container. The content-container content is only loaded when hovering over the trigger. No need to create a class for every tooltip. The tooltip is customizable.
+A tooltip is a brief, informative message that appears when a user interacts with an element. You can use this widget to display a tooltip when hovering over any element. Any element can be used as a trigger for the container. The content-container content is only loaded when hovering over the trigger. No need to create a class for every tooltip. The tooltip is customizable.
 
 ### 1.1 Browser example
 
@@ -12,8 +12,8 @@ You can use this widget to display a tooltip when hovering over any element. Any
 
 ## 2\. Usage
 
-* Place any content in the tooltip trigger container to trigger tooltip visibility.
-* Place any content in the content-container to display when hovering over the triggercontainer.
+* Place any content in the tooltip trigger-container to trigger tooltip visibility.
+* Place any content in the content-container to display when hovering over the trigger-container.
 
 ### 2.1 Modeler example
 
@@ -25,8 +25,7 @@ You can use this widget to display a tooltip when hovering over any element. Any
 <img src="https://raw.githubusercontent.com/simplylogicninjas/sl-widget-tooltip/main/docs/images/tooltip_general_tab.png" width="600">
 
 ## 3\. Use Cases
-
-* This can be used to create a tooltip on any element.
+* When you need to provide the user brief informative message when hovering over an icon-button.
 * This can be used with or without context.
 
 ## 4\. Customization
