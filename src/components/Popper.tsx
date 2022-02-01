@@ -59,7 +59,7 @@ const useContextMenuPopper = (
                 }
             },
             {
-                name: 'offset',
+                name: "offset",
                 options: {
                     offset: [0, offsetDistance]
                 }
