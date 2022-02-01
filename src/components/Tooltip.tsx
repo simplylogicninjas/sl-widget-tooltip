@@ -14,6 +14,7 @@ interface Props {
     placement: PlacementEnum;
     tooltipTriggerContent: ReactNode;
     tooltipContent: ReactNode;
+    offsetDistance: number;
 }
 
 declare let window: any;
@@ -139,15 +140,6 @@ export function Tooltip(props: Props): ReactElement {
         }
     };
 
-    const onFocusEvent = (event: FocusEvent) => {
-        const insideTarget = eventInsideTarget(event, popover.current, menuTrigger);
-
-        if (insideTarget) {
-            setVisibleByFocus(true);
-            showMenu();
-        }
-    };
-
     const initInsideListener = () => {
         if (props.triggerMode === "leftClick") {
             document.addEventListener("mousedown", onClickEvent);
@@ -157,17 +149,12 @@ export function Tooltip(props: Props): ReactElement {
         if (props.triggerMode === "hover") {
             document.addEventListener("mouseover", onHoverEvent);
         }
-
-        if (props.triggerMode === "leftClick" || props.triggerMode === "hover") {
-            // document.addEventListener('focusin', onFocusEvent)
-        }
     };
 
     const destroyInsideListener = () => {
         document.removeEventListener("mousedown", onClickEvent);
         document.removeEventListener("touchstart", onClickEvent);
         document.removeEventListener("mouseover", onHoverEvent);
-        document.removeEventListener("focusin", onFocusEvent);
     };
 
     useEffect(() => {
@@ -184,7 +171,7 @@ export function Tooltip(props: Props): ReactElement {
     }, [menuTrigger]);
 
     const renderMenuTrigger = () => (
-        <div tabIndex={0} className="sl-tooltip-trigger" ref={setMenuTrigger}>
+        <div className="sl-tooltip-trigger" ref={setMenuTrigger}>
             {props.tooltipTriggerContent}
         </div>
     );
@@ -202,6 +189,7 @@ export function Tooltip(props: Props): ReactElement {
                     menuContent={props.tooltipContent}
                     placement={props.placement}
                     triggerMode={props.triggerMode}
+                    offsetDistance={props.offsetDistance}
                 />
             )}
         </React.Fragment>

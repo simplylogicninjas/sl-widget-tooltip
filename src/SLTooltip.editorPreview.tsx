@@ -8,6 +8,7 @@ export function preview(props: SLTooltipPreviewProps): ReactElement {
     return (
         <Tooltip
             {...props}
+            offsetDistance={0}
             name={`popover-${tooltipIndex++}`}
             tooltipContent={
                 <props.tooltipContent.renderer>
