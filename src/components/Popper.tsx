@@ -132,17 +132,6 @@ const Popper = React.forwardRef<PopoverRef | undefined, Props>((props: Props, re
         return () => clearTimeout(timeoutId);
     }, [props.visible]);
 
-    /*
-    TODO: Implement trapFocus if menuContent is rendered.
-    Find focusable elements. Focus first found.
-
-    useEffect(() => {
-        if (menuContentElement) {
-            trapFocus(menuContentElement);
-        }
-    }, [menuContentElement])
-    */
-
     return ReactDOM.createPortal(renderMenu(), document.body);
 });
 
