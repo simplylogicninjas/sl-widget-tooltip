@@ -37,33 +37,33 @@ export function Tooltip(props: Props): ReactElement {
     };
 
     const registerPublicApi = () => {
-        if (window && !window.slPopover) {
-            window.slPopover = {};
+        if (window && !window.slTooltip) {
+            window.slTooltip = {};
         }
 
-        window.slPopover[props.name] = {
+        window.slTooltip[props.name] = {
             hideMenu: () => hideMenu()
         };
     };
 
     const registerActivePopover = () => {
-        if (window && !window.slPopover) {
-            window.slPopover = {};
+        if (window && !window.slTooltip) {
+            window.slTooltip = {};
         }
 
-        window.slPopover.activePopover = {
+        window.slTooltip.activeTooltip = {
             name: props.name,
             autoClose: props.autoClose
         };
     };
 
     const showMenu = () => {
-        if (window && window.slPopover) {
-            const popoverName = window.slPopover.activePopover?.name;
-            const autoClose = window.slPopover.activePopover?.autoClose;
+        if (window && window.slTooltip) {
+            const popoverName = window.slTooltip.activePopover?.name;
+            const autoClose = window.slTooltip.activePopover?.autoClose;
             if (autoClose && popoverName && popoverName !== props.name) {
-                if (window.slPopover[popoverName]) {
-                    window.slPopover[popoverName].hideMenu();
+                if (window.slTooltip[popoverName]) {
+                    window.slTooltip[popoverName].hideMenu();
                 }
             }
         }
